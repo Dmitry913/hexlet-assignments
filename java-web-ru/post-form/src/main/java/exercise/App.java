@@ -41,7 +41,7 @@ public final class App {
            String password = Optional.ofNullable(ctx.formParam("password")).map(Security::encrypt).orElse(null);
 
           UserRepository.save(new User(firstName, lastName, email, password));
-          ctx.redirect("/");
+          ctx.redirect("/users");
         });
         // END
 
