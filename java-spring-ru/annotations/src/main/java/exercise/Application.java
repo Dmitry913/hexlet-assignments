@@ -11,7 +11,7 @@ public class Application {
         // BEGIN
         for (Method method : Address.class.getDeclaredMethods()) {
             if (method.isAnnotationPresent(Inspect.class)) {
-                String returnTypeName = method.getReturnType().getName();
+                String returnTypeName = method.getReturnType().getTypeName();
                 String methodName = method.getName();
                 System.out.printf("Method %s returns a value of type %s\n", methodName, returnTypeName);
             }
